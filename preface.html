@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>はじめに | Spring Boot 永続デプロイ実装ガイド</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header" aria-label="ページ選択">
+    <nav class="site-header__nav" aria-label="スライドナビゲーション">
+      <a class="site-header__link" href="./index.html">タイトル</a>
+      <a class="site-header__link" href="./toc.html">目次</a>
+      <a class="site-header__link site-header__link--active" href="./preface.html">はじめに</a>
+    </nav>
+  </header>
+
+  <main class="deck" aria-label="はじめに">
+    <article class="slide slide--standard">
+      <header class="slide__header">
+        <p class="slide__kicker">PREFACE — はじめに</p>
+      </header>
+
+      <section class="preface" aria-labelledby="preface-title">
+        <h1 class="preface__title" id="preface-title">本書の目的と前提</h1>
+        <blockquote class="preface__quote">
+          <p>Spring Boot をクラウドへ無料でデプロイしたい。</p>
+          <p>しかし H2 はインスタンス停止と同時にすべてを失う ——</p>
+          <p><strong>「揮発するDB」は本番運用に値しない。</strong></p>
+        </blockquote>
+
+        <section class="preface__questions" aria-label="本書で扱う問い">
+          <article class="question-card">
+            <p class="question-card__label">QUESTION 01</p>
+            <h2 class="question-card__title">どうすれば<br>完全に永続化できるか</h2>
+            <p class="question-card__text">Render の Web Service だけでは不十分。外部マネージド PostgreSQL との組み合わせで、コードもデータも壊さずに無料運用する。</p>
+          </article>
+          <article class="question-card">
+            <p class="question-card__label">QUESTION 02</p>
+            <h2 class="question-card__title">スリープ復旧は<br>どう扱うか</h2>
+            <p class="question-card__text">Neon は <strong>0.5秒で自動復旧</strong>。Supabase は <strong>7日放置で一時停止</strong> となるが、ヘルスチェックで予防できる。</p>
+          </article>
+          <article class="question-card">
+            <p class="question-card__label">QUESTION 03</p>
+            <h2 class="question-card__title">どの構成を<br>選べばよいか</h2>
+            <p class="question-card__text">長期放置のポートフォリオなら <strong>Neon</strong>。アクティブ開発と機能拡張なら <strong>Supabase</strong>。本書は両方を完全な手順で示す。</p>
+          </article>
+        </section>
+      </section>
+
+      <footer class="slide__footer">
+        <p class="slide__series">SPRING BOOT 永続デプロイ実装ガイド</p>
+        <p class="slide__page">— 03 / 25 —</p>
+      </footer>
+    </article>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
